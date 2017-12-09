@@ -1,0 +1,23 @@
+class World : ZilchComponent
+{
+    var Item : Array[Array[Tile]] = Array[Array[Tile]]();
+    function Initialize(init : CogInitializer)
+    {
+        for(var x = 0; x<100; ++x)
+        {
+            this.Item.Add(Array[Tile]());
+            for(var y = 0; y<100; ++y)
+            {
+                this.Item.Get(x).Add(new Tile());
+                this.Item.Get(x).Get(y).Position=Integer2(x,y);
+            }
+        }
+        
+    }
+}
+class Tile
+{
+    enum Type {Air, Dirt, Grass, Stone, Wood};
+    var Position : Integer2 = Integer2();
+    var Type : Integer = Type.Air;
+}
