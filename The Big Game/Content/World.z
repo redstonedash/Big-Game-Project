@@ -1,3 +1,4 @@
+enum Types {Air, Dirt, Grass, Stone, Wood}
 class World : ZilchComponent
 {
     var Item : Array[Array[Tile]] = Array[Array[Tile]]();
@@ -10,14 +11,24 @@ class World : ZilchComponent
             {
                 this.Item.Get(x).Add(new Tile());
                 this.Item.Get(x).Get(y).Position=Integer2(x,y);
+                if(y < 45)
+                {
+                    this.Item.Get(x).Get(y).Type=Types.Stone;
+                } else if( y < 50)
+                {
+                    this.SetType(Types.Dirt,this.Item.Get(x).Get(y));
+                }
             }
         }
+        
+    }
+    function SetType(materialType : Integer, tile : Tile)
+    {
         
     }
 }
 class Tile
 {
-    enum Type {Air, Dirt, Grass, Stone, Wood};
     var Position : Integer2 = Integer2();
-    var Type : Integer = Type.Air;
+    var Type : Integer = Types.Air;
 }
