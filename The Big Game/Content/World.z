@@ -3,6 +3,7 @@ class World : ZilchComponent
     var Item : Array[Array[Tile]] = Array[Array[Tile]]();
     function Initialize(init : CogInitializer)
     {
+        enum Type {Air, Dirt, Grass, Stone, Wood};
         for(var x = 0; x<100; ++x)
         {
             this.Item.Add(Array[Tile]());
@@ -17,7 +18,6 @@ class World : ZilchComponent
 }
 class Tile
 {
-    enum Type {Air, Dirt, Grass, Stone, Wood};
     var Position : Integer2 = Integer2();
-    var Type : Integer = Type.Air;
+    var Type : Integer = 0;
 }
