@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.4262676, 16.4586277, 50],
+			Vec3 Translation = [9.97942734, 13.3307457, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [10.4262676, 16.4586277, 4.55746772e-07],
+			Vec3 LookTarget = [9.97942734, 13.3307457, 4.36214748e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -183,7 +183,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 7.67075634, 0],
+			Vec3 Translation = [-0.297893524, 3.79813862, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -204,6 +204,9 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		PlayerMovement = 
+		{
 		},
 	},
 },
